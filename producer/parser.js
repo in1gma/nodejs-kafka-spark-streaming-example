@@ -1,16 +1,3 @@
-// https://en.wikipedia.org/wiki/List_of_Nobel_laureates
-// $(".fn")
-
-// born
-// $(".bday").text()
-
-// die
-// $("th:contains('Died')").next().find("span:hidden").text()
-
-// $("span").filter(function() {
-//     return this.textContent.match(/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/);
-// })
-
 const request = require("request"),
 	cheerio = require("cheerio"),
 	json2csv = require("json2csv").parse,
@@ -71,13 +58,3 @@ request(host + "/" + ref1, function (error, response, body) {
 		console.log(error);
 	}
 });
-
-/*const $ = require('jQuery');
-
-let url = "https://en.wikipedia.org/wiki/List_of_Nobel_laureates";
-
-$.get(url, function (data) {
-	$(".fn a", data).each(function(k, v) {
-		console.log(v.href);
-	});
-});*/
